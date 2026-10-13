@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Professional Set Operation Calculator - B.Tech CSE AI & ML Academic Project">
+
+    <title>Set Operation Calculator | Sandip University</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="top-header">
+
+    <div class="header-container">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                ∪
+            </div>
+
+            <div>
+                <h1>SetCalc</h1>
+                <p>Set Operation Calculator</p>
+            </div>
+
+        </div>
+
+        <nav class="navigation">
+
+            <a href="#calculator">Calculator</a>
+            <a href="#visualization">Visualization</a>
+            <a href="#about">About</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-background"></div>
+
+    <div class="hero-container">
+
+        <div class="hero-content">
+
+            <span class="badge">
+                MATHEMATICS • LOGIC • COMPUTING
+            </span>
+
+            <h2>
+                Set Operation
+                <span>Calculator</span>
+            </h2>
+
+            <p class="hero-description">
+
+                A professional interactive tool for performing
+                mathematical set operations with instant results,
+                formulas, explanations and Venn diagram visualization.
+
+            </p>
+
+            <div class="student-info">
+
+                <strong>
+                    B.Tech CSE (AI & ML)
+                </strong>
+
+                <span>
+                    Sandip University • Academic Project
+                </span>
+
+            </div>
+
+            <div class="hero-buttons">
+
+                <a href="#calculator" class="primary-btn">
+                    Start Calculating →
+                </a>
+
+                <a href="#visualization" class="secondary-btn">
+                    View Venn Diagram
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="hero-card-header">
+
+                <span>SET THEORY</span>
+
+                <span class="status-dot"></span>
+
+            </div>
+
+            <div class="math-display">
+
+                <span>A</span>
+                <span class="operator">∪</span>
+                <span>B</span>
+
+                <span class="equals">=</span>
+
+                <span class="result-symbol">{ A, B }</span>
+
+            </div>
+
+            <div class="hero-card-line"></div>
+
+            <div class="mini-stats">
+
+                <div>
+                    <strong>10+</strong>
+                    <span>Operations</span>
+                </div>
+
+                <div>
+                    <strong>∞</strong>
+                    <span>Possibilities</span>
+                </div>
+
+                <div>
+                    <strong>100%</strong>
+                    <span>Interactive</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+
+<!-- =========================
+     CALCULATOR
+========================= -->
+
+<section id="calculator" class="section">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            CALCULATOR
+        </span>
+
+        <h2>
+            Perform Set Operations
+        </h2>
+
+        <p>
+            Enter your sets and select an operation to calculate
+            the result instantly.
+        </p>
+
+    </div>
+
+
+    <div class="calculator-layout">
+
+
+        <!-- INPUT CARD -->
+
+        <div class="card input-card">
+
+            <div class="card-title">
+
+                <div class="title-icon">
+                    ⚙
+                </div>
+
+                <div>
+                    <h3>Set Configuration</h3>
+                    <p>Enter your set values</p>
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="setA">
+                    Set A
+                </label>
+
+                <div class="input-wrapper">
+
+                    <span>A = {</span>
+
+                    <input
+                        type="text"
+                        id="setA"
+                        placeholder="1, 2, 3, 4, 5"
+                        value="1, 2, 3, 4, 5"
+                    >
+
+                    <span>}</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="setB">
+                    Set B
+                </label>
+
+                <div class="input-wrapper">
+
+                    <span>B = {</span>
+
+                    <input
+                        type="text"
+                        id="setB"
+                        placeholder="3, 4, 5, 6, 7"
+                        value="3, 4, 5, 6, 7"
+                    >
+
+                    <span>}</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="universal">
+                    Universal Set
+                    <small>Required for complement operations</small>
+                </label>
+
+                <div class="input-wrapper">
+
+                    <span>U = {</span>
+
+                    <input
+                        type="text"
+                        id="universal"
+                        placeholder="1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
+                        value="1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
+                    >
+
+                    <span>}</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="operation">
+                    Select Operation
+                </label>
+
+                <select id="operation">
+
+                    <optgroup label="Basic Operations">
+
+                        <option value="union">
+                            Union — A ∪ B
+                        </option>
+
+                        <option value="intersection">
+                            Intersection — A ∩ B
+                        </option>
+
+                        <option value="differenceAB">
+                            Difference — A − B
+                        </option>
+
+                        <option value="differenceBA">
+                            Difference — B − A
+                        </option>
+
+                        <option value="symmetric">
+                            Symmetric Difference — A △ B
+                        </option>
+
+                    </optgroup>
+
+
+                    <optgroup label="Complement Operations">
+
+                        <option value="complementA">
+                            Complement — A′
+                        </option>
+
+                        <option value="complementB">
+                            Complement — B′
+                        </option>
+
+                    </optgroup>
+
+
+                    <optgroup label="Relationship Operations">
+
+                        <option value="subset">
+                            Check A ⊆ B
+                        </option>
+
+                        <option value="properSubset">
+                            Check A ⊂ B
+                        </option>
+
+                        <option value="superset">
+                            Check A ⊇ B
+                        </option>
+
+                        <option value="properSuperset">
+                            Check A ⊃ B
+                        </option>
+
+                        <option value="equal">
+                            Check A = B
+                        </option>
+
+                        <option value="disjoint">
+                            Check Disjoint Sets
+                        </option>
+
+                    </optgroup>
+
+
+                    <optgroup label="Set Information">
+
+                        <option value="cardinality">
+                            Cardinality
+                        </option>
+
+                        <option value="powerSet">
+                            Power Set
+                        </option>
+
+                        <option value="cartesian">
+                            Cartesian Product A × B
+                        </option>
+
+                    </optgroup>
+
+                </select>
+
+            </div>
+
+
+            <div class="button-row">
+
+                <button
+                    id="calculateBtn"
+                    class="calculate-btn"
+                    type="button"
+                >
+                    Calculate Result
+                    <span>→</span>
+                </button>
+
+                <button
+                    id="clearBtn"
+                    class="clear-btn"
+                    type="button"
+                >
+                    Clear
+                </button>
+
+            </div>
+
+            <p class="keyboard-tip">
+                Tip: Press <kbd>Ctrl</kbd> + <kbd>Enter</kbd> to calculate.
+            </p>
+
+        </div>
+
+
+        <!-- RESULT CARD -->
+
+        <div class="card result-card">
+
+            <div class="card-title">
+
+                <div class="title-icon result-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <h3>Calculation Result</h3>
+                    <p>Your result will appear here</p>
+                </div>
+
+            </div>
+
+
+            <div class="result-box">
+
+                <div class="result-header">
+
+                    <span id="resultTitle">
+                        Union of A and B
+                    </span>
+
+                    <span class="result-symbol">
+                        A ∪ B
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="result"
+                    class="result-value"
+                >
+                    { 1, 2, 3, 4, 5, 6, 7 }
+                </div>
+
+            </div>
+
+
+            <div class="explanation-box">
+
+                <div class="explanation-title">
+                    <span>💡</span>
+                    Explanation
+                </div>
+
+                <p id="explanation">
+                    The union of two sets contains all elements
+                    that are present in either Set A or Set B.
+                </p>
+
+            </div>
+
+
+            <div class="formula-box">
+
+                <span>
+                    Formula
+                </span>
+
+                <strong id="formula">
+                    A ∪ B = {x | x ∈ A or x ∈ B}
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- STATISTICS -->
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+            <span class="stat-icon">A</span>
+
+            <div>
+                <small>Elements in A</small>
+                <strong id="statA">5</strong>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span class="stat-icon">B</span>
+
+            <div>
+                <small>Elements in B</small>
+                <strong id="statB">5</strong>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span class="stat-icon">∩</span>
+
+            <div>
+                <small>Intersection</small>
+                <strong id="statIntersection">3</strong>
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span class="stat-icon">∪</span>
+
+            <div>
+                <small>Union</small>
+                <strong id="statUnion">7</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     VISUALIZATION
+========================= -->
+
+<section id="visualization" class="section visualization-section">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            VISUALIZATION
+        </span>
+
+        <h2>
+            Interactive Venn Diagram
+        </h2>
+
+        <p>
+            Visualize the relationship between Set A and Set B.
+        </p>
+
+    </div>
+
+
+    <div class="visualization-card card">
+
+        <div class="venn-container">
+
+            <svg
+                id="vennSvg"
+                viewBox="0 0 700 430"
+                class="venn-svg"
+            >
+
+                <defs>
+
+                    <radialGradient
+                        id="circleGradientA"
+                        cx="50%"
+                        cy="50%"
+                        r="60%"
+                    >
+
+                        <stop
+                            offset="0%"
+                            stop-color="#60a5fa"
+                            stop-opacity="0.72"
+                        />
+
+                        <stop
+                            offset="100%"
+                            stop-color="#2563eb"
+                            stop-opacity="0.35"
+                        />
+
+                    </radialGradient>
+
+
+                    <radialGradient
+                        id="circleGradientB"
+                        cx="50%"
+                        cy="50%"
+                        r="60%"
+                    >
+
+                        <stop
+                            offset="0%"
+                            stop-color="#c084fc"
+                            stop-opacity="0.72"
+                        />
+
+                        <stop
+                            offset="100%"
+                            stop-color="#7c3aed"
+                            stop-opacity="0.35"
+                        />
+
+                    </radialGradient>
+
+
+                    <clipPath id="clipA">
+
+                        <circle
+                            cx="280"
+                            cy="215"
+                            r="135"
+                        />
+
+                    </clipPath>
+
+
+                    <mask id="maskAOnly">
+
+                        <rect
+                            x="0"
+                            y="0"
+                            width="700"
+                            height="430"
+                            fill="black"
+                        />
+
+                        <circle
+                            cx="280"
+                            cy="215"
+                            r="135"
+                            fill="white"
+                        />
+
+                        <circle
+                            cx="420"
+                            cy="215"
+                            r="135"
+                            fill="black"
+                        />
+
+                    </mask>
+
+
+                    <mask id="maskBOnly">
+
+                        <rect
+                            x="0"
+                            y="0"
+                            width="700"
+                            height="430"
+                            fill="black"
+                        />
+
+                        <circle
+                            cx="420"
+                            cy="215"
+                            r="135"
+                            fill="white"
+                        />
+
+                        <circle
+                            cx="280"
+                            cy="215"
+                            r="135"
+                            fill="black"
+                        />
+
+                    </mask>
+
+
+                    <mask id="maskOutside">
+
+                        <rect
+                            x="0"
+                            y="0"
+                            width="700"
+                            height="430"
+                            fill="white"
+                        />
+
+                        <circle
+                            cx="280"
+                            cy="215"
+                            r="135"
+                            fill="black"
+                        />
+
+                        <circle
+                            cx="420"
+                            cy="215"
+                            r="135"
+                            fill="black"
+                        />
+
+                    </mask>
+
+                </defs>
+
+
+                <!-- OUTSIDE -->
+
+                <rect
+                    id="outside"
+                    x="0"
+                    y="0"
+                    width="700"
+                    height="430"
+                    fill="#64748b"
+                    opacity="0"
+                    mask="url(#maskOutside)"
+                />
+
+
+                <!-- A ONLY -->
+
+                <rect
+                    id="aOnly"
+                    x="0"
+                    y="0"
+                    width="700"
+                    height="430"
+                    fill="url(#circleGradientA)"
+                    mask="url(#maskAOnly)"
+                />
+
+
+                <!-- B ONLY -->
+
+                <rect
+                    id="bOnly"
+                    x="0"
+                    y="0"
+                    width="700"
+                    height="430"
+                    fill="url(#circleGradientB)"
+                    mask="url(#maskBOnly)"
+                />
+
+
+                <!-- FULL CIRCLES -->
+
+                <circle
+                    cx="280"
+                    cy="215"
+                    r="135"
+                    fill="none"
+                    stroke="#60a5fa"
+                    stroke-width="4"
+                />
+
+                <circle
+                    cx="420"
+                    cy="215"
+                    r="135"
+                    fill="none"
+                    stroke="#c084fc"
+                    stroke-width="4"
+                />
+
+
+                <!-- INTERSECTION -->
+
+                <circle
+                    id="intersection"
+                    cx="420"
+                    cy="215"
+                    r="135"
+                    fill="#a78bfa"
+                    opacity="0.55"
+                    clip-path="url(#clipA)"
+                />
+
+
+                <!-- LABELS -->
+
+                <text
+                    x="225"
+                    y="120"
+                    class="venn-label"
+                >
+                    SET A
+                </text>
+
+                <text
+                    x="475"
+                    y="120"
+                    class="venn-label"
+                >
+                    SET B
+                </text>
+
+
+                <text
+                    x="210"
+                    y="220"
+                    class="venn-value"
+                    id="vennAOnly"
+                >
+                    1, 2
+                </text>
+
+
+                <text
+                    x="350"
+                    y="220"
+                    class="venn-value"
+                    id="vennIntersection"
+                >
+                    3, 4, 5
+                </text>
+
+
+                <text
+                    x="490"
+                    y="220"
+                    class="venn-value"
+                    id="vennBOnly"
+                >
+                    6, 7
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <div class="venn-legend">
+
+            <div class="legend-item">
+
+                <span class="legend-dot a-dot"></span>
+
+                <span>
+                    A Only
+                </span>
+
+            </div>
+
+
+            <div class="legend-item">
+
+                <span class="legend-dot intersection-dot"></span>
+
+                <span>
+                    A ∩ B
+                </span>
+
+            </div>
+
+
+            <div class="legend-item">
+
+                <span class="legend-dot b-dot"></span>
+
+                <span>
+                    B Only
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about" class="section">
+
+    <div class="section-heading">
+
+        <span class="section-label">
+            ABOUT PROJECT
+        </span>
+
+        <h2>
+            Understanding Set Theory
+        </h2>
+
+        <p>
+            This academic project demonstrates fundamental concepts
+            of set theory through an interactive web application.
+        </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+
+        <div class="card about-card">
+
+            <div class="about-icon">
+                ∪
+            </div>
+
+            <h3>
+                What is a Set?
+            </h3>
+
+            <p>
+                A set is a well-defined collection of distinct
+                objects or elements. Sets are commonly represented
+                using curly brackets.
+            </p>
+
+            <div class="example">
+                A = {1, 2, 3, 4}
+            </div>
+
+        </div>
+
+
+        <div class="card about-card">
+
+            <div class="about-icon">
+                ∩
+            </div>
+
+            <h3>
+                Set Operations
+            </h3>
+
+            <p>
+                Set operations allow us to combine, compare and
+                analyze different collections of elements.
+            </p>
+
+            <div class="example">
+                A ∪ B &nbsp; A ∩ B &nbsp; A − B
+            </div>
+
+        </div>
+
+
+        <div class="card about-card">
+
+            <div class="about-icon">
+                ◯
+            </div>
+
+            <h3>
+                Venn Diagram
+            </h3>
+
+            <p>
+                Venn diagrams provide a visual representation of
+                relationships between sets and their elements.
+            </p>
+
+            <div class="example">
+                A ∩ B = Common Elements
+            </div>
+
+        </div>
+
+
+        <div class="card about-card">
+
+            <div class="about-icon">
+                &lt;/&gt;
+            </div>
+
+            <h3>
+                Web Technology
+            </h3>
+
+            <p>
+                The calculator is implemented using HTML, CSS and
+                JavaScript to provide an interactive experience.
+            </p>
+
+            <div class="technology-list">
+
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROJECT DETAILS -->
+
+    <div class="project-details card">
+
+        <div class="project-detail">
+
+            <span>PROJECT</span>
+
+            <strong>
+                Set Operation Calculator
+            </strong>
+
+        </div>
+
+
+        <div class="project-detail">
+
+            <span>COURSE</span>
+
+            <strong>
+                B.Tech CSE (AI & ML)
+            </strong>
+
+        </div>
+
+
+        <div class="project-detail">
+
+            <span>UNIVERSITY</span>
+
+            <strong>
+                Sandip University
+            </strong>
+
+        </div>
+
+
+        <div class="project-detail">
+
+            <span>DOMAIN</span>
+
+            <strong>
+                Discrete Mathematics & Logic
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <div class="brand-icon">
+                ∪
+            </div>
+
+            <div>
+
+                <h3>
+                    SetCalc
+                </h3>
+
+                <p>
+                    Set Operation Calculator
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-info">
+
+            <p>
+                Academic Project
+            </p>
+
+            <p>
+                B.Tech CSE (AI & ML) • Sandip University
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <small>
+            © 2026 • Sandip University Academic Project
+        </small>
+
+        <small>
+            Built with HTML • CSS • JavaScript
+        </small>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
